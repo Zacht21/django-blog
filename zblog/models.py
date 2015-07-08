@@ -5,6 +5,9 @@ class EntryQuerySet(models.QuerySet):
         return self.filter(publico=True)
 
 class Entrada (models.Model):
+    """
+    Modelo de entrada - contiene todo lo necesario para el contenido de un post.
+    """
     titulo = models.CharField(max_length=200)
     contenido = models.TextField()
     slug = models.SlugField(max_length=200, unique=True)
@@ -15,4 +18,8 @@ class Entrada (models.Model):
     objects = EntryQuerySet.as_manager()
 
     def __str__(self):
+        """
+        Metodo que regresa el titulo en string.
+        :return: titulo - Titulo del post
+        """
         return self.titulo

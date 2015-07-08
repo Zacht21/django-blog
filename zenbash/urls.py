@@ -7,5 +7,7 @@ urlpatterns = [
     url(r'^markdown/', include("django_markdown.urls")),
 
     url(r'^$', IndexView.as_view()),
-    url(r'^entrada/(?P<slug>[-\w]+)/$', EntradaDetailView.as_view()),
+    url(r'^art/(?P<slug>[-\w]+)/$', EntradaDetailView.as_view()),
+    url(r'^index2/', 'zblog.views.home', name='home'),
+    #url(r'^form/', 'zblog.views.', name='form'),
 ]

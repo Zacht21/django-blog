@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>zBlog</title>
+</head>
+    <h1>zBlog</h1>
+    {% for articulo in articulos %}
+    <div class="container">
+        <h2>{{ articulo.titulo }}</h2>
+        <p>{{ articulo.contenido }}</p>
+    </div>
+    {% endfor %}
+
+
+<body>
+
+</body>
+</html>
